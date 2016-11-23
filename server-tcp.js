@@ -15,13 +15,19 @@ var app                = express();
 app.use(express.static(__dirname + '/public'));
 
 var server  = http.createServer(app);
-
+/*
 var feed    = new RemoteTCPFeedRelay(server, {
   feed_ip   : "172.19.20.165",
   feed_port : 5001,
 });
+*/
+var feed    = new RemoteTCPFeedRelay(server, {
+  feed_ip   : "127.0.0.1",
+  feed_port : 8082,
+  video_path     : "samples/out.h264",
+});
 
 
-server.listen(8080);
+server.listen(8084);
 
 

@@ -29,13 +29,22 @@ source = {
   video_duration : 58,
 };
 
+/*
+source = {
+  width     : 1280,
+  height    : 720,
+
+  video_path     : "samples/long.h264",
+  video_duration : 400,
+};
+*/
 
 
 
 var feed    = new RemoteTCPFeedRelay(server, source);
 
 
-server.listen(8080);
+server.listen(8084);
 
 
 
