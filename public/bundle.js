@@ -2582,7 +2582,6 @@ var uClass = function(proto){
 
 module.exports = uClass;
 },{"./implement":8,"mout/lang/createObject":10,"mout/lang/kindOf":15,"mout/object/hasOwn":18,"mout/object/merge":19,"mout/object/mixIn":20}],22:[function(require,module,exports){
-//var WSAvcPlayer = require('../vendor');
 var WSAvcPlayer = require('../vendor/wsavc/index.js');
 
 /*
@@ -3658,6 +3657,7 @@ Script.createFromSource = function(type, source) {
 
 
 module.exports = Script;
+
 },{"../utils/assert":31}],26:[function(require,module,exports){
 "use strict";
 

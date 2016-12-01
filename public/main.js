@@ -1,4 +1,3 @@
-//var WSAvcPlayer = require('../vendor');
 var WSAvcPlayer = require('../vendor/wsavc/index.js');
 
 /*
