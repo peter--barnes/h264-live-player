@@ -25,11 +25,11 @@ def main(argv):
     # start 2 threads
     try:
         if len(argv) == 1:
-            thread.start_new_thread( netcat_from_file, (8082,"long.h264") )
-            thread.start_new_thread( netcat_from_file, (8083,"long2.h264") )
+            thread.start_new_thread( netcat_from_file, (9010,"long.h264") )
+            thread.start_new_thread( netcat_from_file, (9011,"long2.h264") )
         else:
-            thread.start_new_thread( netcat_from_rtsp, (8082,"rtsp://admin:12345@192.168.0.12:554/Streaming/Channels/101") )
-            thread.start_new_thread( netcat_from_rtsp, (8083,"rtsp://admin:admin@192.168.0.104:554/cam/realmonitor?channel=1&subtype=0") )
+            thread.start_new_thread( netcat_from_rtsp, (9010,"rtsp://admin:12345@192.168.0.12:554/Streaming/Channels/101") )
+            thread.start_new_thread( netcat_from_rtsp, (9011,"rtsp://admin:admin@192.168.0.104:554/cam/realmonitor?channel=1&subtype=0") )
     except:
         print "Error: unable to start thread"
 

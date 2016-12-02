@@ -15,20 +15,31 @@ var app                = express();
 app.use(express.static(__dirname + '/public'));
 
 var server  = http.createServer(app);
-var feed0    = new RemoteTCPFeedRelay(server, {
-  feed_ip   : "127.0.0.1",
-  feed_port : 8082,
-  ws_port   : 8085,
-//  ws_id : 0,
-});
+
+var screen_num = 2;
+var feed    = new Array(screen_num);
+var feed_start_port = 9010;
+var ws_start_port = 9020;
+
+for(var i=0;i<screen_num;i++)
+{
+      feed[i]    = new RemoteTCPFeedRelay(server, {
+      feed_ip   : "127.0.0.1",
+      feed_port : feed_start_port + i,
+      ws_port   : ws_start_port + i,
+    //  ws_id : 0,
+    });
+}
+/*
 var feed1    = new RemoteTCPFeedRelay(server, {
   feed_ip   : "127.0.0.1",
   feed_port : 8083,
   ws_port   : 8086,
 //  ws_id     : 1,
 });
+*/
 
 
-server.listen(8084);
+server.listen(9000);
 
 

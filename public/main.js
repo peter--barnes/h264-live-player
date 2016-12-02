@@ -7,11 +7,11 @@ document.body.appendChild(canvas[0]);
 document.body.appendChild(canvas[1]);
 */
 var screen_num = 2;
+var ws_start_port = 9020;
 var canvas = new Array(screen_num);
 var wsavc = new Array(screen_num);
 var ws_uri = new Array(screen_num);
-var ws_start_port = 8085;
-for(i=0;i<screen_num;i++)
+for(var i=0;i<screen_num;i++)
 {
     canvas[i] = document.getElementById("canvas"+i);
     wsavc[i] = new WSAvcPlayer(canvas[i], "webgl", 1, 35);
@@ -22,7 +22,8 @@ for(i=0;i<screen_num;i++)
 //var uri = "ws://" + document.location.host;
 
 
-
 //for button callbacks
+/*
 window.wsavc0 = wsavc[0];
 window.wsavc1 = wsavc[1];
+*/
