@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/public'));
 
 var server  = http.createServer(app);
 
-var screen_num = 2;
+var screen_num = 4;
 var feed    = new Array(screen_num);
 var feed_start_port = 9010;
 var ws_start_port = 9020;
@@ -27,7 +27,6 @@ for(var i=0;i<screen_num;i++)
       feed_ip   : "127.0.0.1",
       feed_port : feed_start_port + i,
       ws_port   : ws_start_port + i,
-    //  ws_id : 0,
     });
 }
 /*
